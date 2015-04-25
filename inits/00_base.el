@@ -138,6 +138,10 @@
 ; 1.5の倍数をセットする
 ;(add-to-list 'default-frame-alist '(font . "ricty-13.5"))
 
+(custom-set-faces
+ '(default ((t (:family "VL ゴシック" :foundry "unknown" :slant normal :weight normal :height 120 :width normal)))))
+
+
 ; カーソル位置の記憶とそこへのジャンプ
 (define-key global-map (kbd "C-x p") `point-to-register)
 (define-key global-map (kbd "C-x j") `jump-to-register)
