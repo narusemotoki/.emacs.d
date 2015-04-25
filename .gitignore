@@ -4,6 +4,7 @@ auto-save-list/
 elpa/archives/
 url/
 eshell/
+.python-environments/
 
 session.*
 .mc-lists.el
