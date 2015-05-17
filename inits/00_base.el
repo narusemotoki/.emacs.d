@@ -150,3 +150,8 @@
 ;(defun my-after-init-hook ()
 ;(let ((envs '("PATH" "GOROOT" "GOPATH")))
 ;  (exec-path-from-shell-copy-envs envs)))
+
+; emacsclientのためにサーバ起動
+(require 'server)
+(unless (server-running-p)
+  (server-start))
