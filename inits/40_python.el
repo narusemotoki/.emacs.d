@@ -1,6 +1,7 @@
 ; flymake
 (require 'flymake-python-pyflakes)
 (setq flymake-python-pyflakes-executable "flake8")
+(setq flymake-python-pyflakes-extra-arguments '("--max-line-length=99"))
 (add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
 
 ; http://qiita.com/yuu116atlab/items/2a62cb880ac863dcc8ef
