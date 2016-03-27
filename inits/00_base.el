@@ -137,10 +137,12 @@
 ; rictyはsetup.shでインストールできる
 ; 1.5の倍数をセットする
 ;(add-to-list 'default-frame-alist '(font . "ricty-13.5"))
+(if (string-equal (system-name) "y260")
+    ; ユニバーサルアクセスの大きな文字が優先されるので、少し時間を置いて実行することで回避
+    (run-at-time "1 sec" nil (lambda () (custom-set-faces
+                                         '(default ((t (:family "VL ゴシック" :foundry "unknown" :slant normal :weight normal :height 100 :width normal)))))))
 
-(custom-set-faces
- '(default ((t (:family "VL ゴシック" :foundry "unknown" :slant normal :weight normal :height 120 :width normal)))))
-
+    )
 
 ; カーソル位置の記憶とそこへのジャンプ
 (define-key global-map (kbd "C-x p") `point-to-register)
