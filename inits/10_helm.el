@@ -15,13 +15,15 @@
 (global-set-key (kbd "C-C C-g") 'helm-git-grep)
 ; M-xを置き換える。これにしないとHistoryが上に出てこない
 (global-set-key (kbd "M-x") 'helm-M-x)
+; Gitでfind-file
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
 ; 高速で反応させる
 (setq helm-idle-delay 0.1)
 (setq helm-input-idle-delay 0.1)
-
-; TABを押すと現在カーソルがあるものになる
-(define-key helm-c-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
 
 ; 自動補完を無効
 ; パスが勝手に補完されて不便なことがあるし、どうせTABで自分で補完するので無効化
