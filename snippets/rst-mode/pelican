@@ -6,6 +6,7 @@ title
 #####
 
 :date: `(insert (format-time-string "%Y-%m-%d %H:%M"))`
+:modified: `(insert (format-time-string "%Y-%m-%d %H:%M"))`
 :slug: `(insert (replace-regexp-in-string "\.rst$" "" (file-name-nondirectory (buffer-file-name))))`
 :category: $2
 :tags: $3
