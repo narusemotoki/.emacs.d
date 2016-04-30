@@ -140,7 +140,7 @@
 (if (string-equal (system-name) "y260")
     ; ユニバーサルアクセスの大きな文字が優先されるので、少し時間を置いて実行することで回避
     (run-at-time "1 sec" nil (lambda () (custom-set-faces
-                                         '(default ((t (:family "VL ゴシック" :foundry "unknown" :slant normal :weight normal :height 100 :width normal)))))))
+                                         '(default ((t (:family "VL ゴシック" :foundry "unknown" :slant normal :weight normal :height 110 :width normal)))))))
 
     )
 
